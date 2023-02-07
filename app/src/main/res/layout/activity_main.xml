@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/mycalendar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            app:eventsEnabled="true"
+            app:selectionColor="@color/colorBrown"
+            app:headerColor="@color/colorBrown"
+            app:highlightedDaysLabelsColor="@color/colorYellow"
+            app:type="one_day_picker">
+    </com.applandeo.materialcalendarview.CalendarView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="@string/text_egg_counter"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/egg_count_picker"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_centerInParent="true"
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_textSize="12dp"
+            app:np_selectedTextColor="@color/colorBrown"
+            app:np_textColor="@color/colorYellow"
+            app:np_value="3" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/text_weather"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/weather_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="10"
+            app:np_dividerColor="@color/colorWhite"
+            app:np_dividerType="underline"
+            app:np_textSize="12dp"
+            app:np_height="64dp"
+            app:np_max="59"
+            app:np_min="0"
+            app:np_orientation="horizontal"
+            app:np_selectedTextColor="@color/colorBrown"
+            app:np_textColor="@color/colorYellow"
+            app:np_value="3" />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/degree_picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:layout_centerInParent="true"
+            app:np_width="64dp"
+            app:np_height="180dp"
+            app:np_dividerColor="@color/colorPrimary"
+            app:np_max="50"
+            app:np_min="-30"
+            app:np_textSize="12dp"
+            app:np_selectedTextColor="@color/colorBrown"
+            app:np_textColor="@color/colorYellow"
+            app:np_value="0" />
+
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:onClick="saveData"
+            android:text="@string/text_save_data" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
